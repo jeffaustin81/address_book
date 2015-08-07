@@ -10,11 +10,9 @@
 
     $app = new Silex\Application();
 
-    $app->register(new Silex\Provider\TwigServiceProvider(), array('twig.path' => __DIR__.'/../views'
-    ));
+    $app->register(new Silex\Provider\TwigServiceProvider(), array('twig.path' => __DIR__.'/../views'));
 
-    $app->get('/', function() use ($app) {
-
-        // Enter code here...;
+    $app->get("/", function() use ($app) {
+        return $app['twig']->render('contacts.html.twig', array('contacts' => Contact::getAll()));
     });
 ?>
