@@ -1,40 +1,43 @@
 <html>
-  <head>
+    <!-- This view is the home page view or the root index that includes a form that allows you to create a new
+    contact by entering information into the form and clicking the add contact button the page will also display all
+    of your contacts you have created -->
+    <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <title>Contacts</title>
-  </head>
-  <body>
-      <div class="container">
-        <h1>Contacts</h1>
-        {% if contacts is not empty %}
-        <p>Here are all your contacts:</p>
-        <ul>
-          {% for contact in contacts %}
-            <li>{{ contact.getName }}</li>
-            <li>{{ contact.getPhone }}</li>
-            <li>{{ contact.getAddress }}</li>
-          {% endfor %}
-        </ul>
-        {% endif %}
+    </head>
+    <body>
+        <div class="container">
+            <h1>Contacts</h1>
+            {% if contacts is not empty %}
+            <p>Here are all your contacts:</p>
+            <ul>
+                {% for contact in contacts %}
+                <li>{{ contact.getName }}</li>
+                <li>{{ contact.getPhone }}</li>
+                <li>{{ contact.getAddress }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
 
-        <form action='/contacts' method='post'>
-            <div class="form-group">
-              <label for='name'>Name</label>
-              <input id='name' name='name' type='text' class="form-control">
-            </div>
-            <div class="form-group">
-              <label for='phone'>Phone Number</label>
-              <input id='phone' name='phone' type='text' class="form-control">
-            </div>
-            <div class="form-group">
-              <label for='address'>Address</label>
-              <input id='address' name='address' type='text' class="form-control">
-            </div>
-            <button type='submit' class="btn btn-success">Add Contact</button>
-        </form>
-        <form action='/delete_contacts' method='post'>
-            <button type='submit' class="btn btn-danger">Clear Contacts</button>
-        </form>
-      </div>
-  </body>
+            <form action='/contacts' method='post'>
+                    <div class="form-group">
+                        <label for='name'>Name</label>
+                        <input id='name' name='name' type='text' class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for='phone'>Phone Number</label>
+                        <input id='phone' name='phone' type='text' class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for='address'>Address</label>
+                        <input id='address' name='address' type='text' class="form-control">
+                    </div>
+                    <button type='submit' class="btn btn-success">Add Contact</button>
+            </form>
+            <form action='/delete_contacts' method='post'>
+                    <button type='submit' class="btn btn-danger">Clear Contacts</button>
+            </form>
+        </div>
+    </body>
 </html>

@@ -1,4 +1,7 @@
 <html>
+<!-- This page simply displays the new contact you have created and has a back button so that you can
+return to the home page where your new contact will displayed along with a list of any other contacts you have
+created -->
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <title>Contact Created</title>
@@ -10,7 +13,7 @@
         <h3>{{ newcontact.getPhone }}</h3>
         <h3>{{ newcontact.getAddress }}</h3>
         <form action='/' method='get'>
-            <button type='submit' class="btn btn-default"><a href="/">Back</a></button>
+            <button type='submit' class="btn btn-default">Back</button>
         </form>
     </div>
 </body>
