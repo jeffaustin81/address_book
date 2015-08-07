@@ -6,7 +6,7 @@
   <body>
       <div class="container">
         <h1>Contacts</h1>
-        {% if contacts is not empty%}
+        {% if contacts is not empty %}
         <p>Here are all your contacts:</p>
         <ul>
           {% for contact in contacts %}
@@ -17,7 +17,7 @@
         </ul>
         {% endif %}
 
-        <form action='/tasks' method='post'>
+        <form action='/contacts' method='post'>
             <div class="form-group">
               <label for='name'>Name</label>
               <input id='name' name='name' type='text' class="form-control">

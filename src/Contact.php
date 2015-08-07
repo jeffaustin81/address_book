@@ -16,7 +16,7 @@ class Contact
     {
         $this->name = (string) $set_name;
     }
-    function getName($get_name)
+    function getName()
     {
         return $this->name;
     }
@@ -24,7 +24,7 @@ class Contact
     {
         $this->phone = (string) $set_phone;
     }
-    function getPhone($get_phone)
+    function getPhone()
     {
         return $this->phone;
     }
@@ -32,7 +32,7 @@ class Contact
     {
         $this->address = (string) $set_address;
     }
-    function getAddress($get_address)
+    function getAddress()
     {
         return $this->address;
     }
