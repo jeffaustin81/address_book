@@ -19,7 +19,7 @@ Technologies used in this project include: PHP, Silex, Twig, and Bootstrap.
 ### Legal
 
 
-Copyright (c) 2015 **_{List of contribtors}_**
+Copyright (c) 2015 Jeff Austin
 
 This software is licensed under the MIT license.
 
