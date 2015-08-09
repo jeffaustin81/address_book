@@ -10,14 +10,14 @@
         <div class="container">
             <h1>Contacts</h1>
             {% if contacts is not empty %}
-            <p>Here are all your contacts:</p>
-            <ul>
+            <h3>Here are all your contacts:</h3>
+
                 {% for contact in contacts %}
-                <li>{{ contact.getName }}</li>
-                <li>{{ contact.getPhone }}</li>
-                <li>{{ contact.getAddress }}</li>
+                <h3>{{ contact.getName }}</h3>
+                <h4>{{ contact.getPhone }}</h4>
+                <h4>{{ contact.getAddress }}</h4>
                 {% endfor %}
-            </ul>
+
             {% endif %}
 
             <form action='/contacts' method='post'>
